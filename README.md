@@ -54,7 +54,7 @@ data/
 如需修改链接，请在 `index.html` 中搜索：
 
 ```txt
-https://nas.lazynas.com
+https://fnos.net/lazynas
 ```
 
 不要在前端代码写入密码、token、内网 IP，也不要使用 iframe 嵌入 NAS。

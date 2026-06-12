@@ -48,10 +48,13 @@ data/
 
 当前页面只显示 `进入 NAS`，不显示端口号、内网 IP、设备型号、用户名或密码。
 
-如需修改链接，请在 `index.html` 中搜索：
+页面会优先探测飞牛官方入口，若当前访客浏览器无法连接，则自动切换到公网备选入口。
+
+如需修改链接，请在 `script.js` 中搜索：
 
 ```txt
 https://fnos.net/lazynas
+https://nas.lazynas.com
 ```
 
 不要在前端代码写入密码、token、内网 IP，也不要使用 iframe 嵌入 NAS。

@@ -1,0 +1,68 @@
+:root {
+  --hero-progress: 0;
+}
+
+.page-mask {
+  position: fixed;
+  inset: 0;
+  z-index: 8;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 248, 236, calc(var(--hero-progress) * 0.86)) 0%,
+      rgba(255, 248, 236, calc(var(--hero-progress) * 0.68)) 54%,
+      rgba(255, 248, 236, calc(var(--hero-progress) * 0.34)) 100%
+    );
+  backdrop-filter: blur(calc(var(--hero-progress) * 10px));
+  opacity: calc(var(--hero-progress) * 0.96);
+}
+
+.brand {
+  display: inline-grid;
+  gap: 2px;
+}
+
+.header-slogan {
+  max-width: min(46vw, 240px);
+  color: currentColor;
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.2;
+  opacity: var(--hero-progress);
+  transform: translateY(calc((1 - var(--hero-progress)) * 8px));
+  transition:
+    opacity 120ms linear,
+    transform 120ms linear;
+}
+
+.hero-title {
+  transform:
+    translate3d(
+      calc(var(--hero-progress) * -28vw),
+      calc(var(--hero-progress) * -38vh),
+      0
+    )
+    scale(calc(1 - var(--hero-progress) * 0.56));
+  opacity: calc(1 - var(--hero-progress) * 0.88);
+  transform-origin: left center;
+  transition:
+    transform 80ms linear,
+    opacity 80ms linear;
+}
+
+@media (max-width: 820px) {
+  .header-slogan {
+    max-width: 42vw;
+  }
+
+  .hero-title {
+    transform:
+      translate3d(
+        calc(var(--hero-progress) * -20vw),
+        calc(var(--hero-progress) * -36vh),
+        0
+      )
+      scale(calc(1 - var(--hero-progress) * 0.42));
+  }
+}

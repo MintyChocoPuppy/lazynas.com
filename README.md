@@ -32,12 +32,12 @@ data/
 
 ```json
 {
-  "title": "南京 · 夜游秦淮",
-  "date": "2026.06.12",
-  "place": "南京",
-  "summary": "晚风吹过河面，我们把灯影装进了相册。",
+  "title": "第一次认真整理小窝",
+  "date": "2026.06",
+  "place": "示例地点",
+  "summary": "这里先放一段示例文字，后续替换成真实生活记录。",
   "cover": "./assets/milestones/demo-cover.svg",
-  "tags": ["旅行", "夜景", "散步"],
+  "tags": ["示例", "生活", "记录"],
   "url": "#"
 }
 ```
@@ -51,7 +51,7 @@ data/
 如需修改链接，请在 `index.html` 中搜索：
 
 ```txt
-https://nas.lazynas.com
+https://fnos.net/lazynas
 ```
 
 不要在前端代码写入密码、token、内网 IP，也不要使用 iframe 嵌入 NAS。

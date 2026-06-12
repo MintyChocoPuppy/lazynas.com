@@ -7,6 +7,7 @@
 ```txt
 index.html
 styles.css
+scroll-effects.css
 script.js
 assets/
   hero/cover.svg
@@ -48,12 +49,11 @@ data/
 
 当前页面只显示 `进入 NAS`，不显示端口号、内网 IP、设备型号、用户名或密码。
 
-页面会静默优先探测飞牛官方入口，若当前访客浏览器无法连接，则自动切换到公网备选入口。受浏览器跨域限制影响，这个探测只能判断入口请求是否可达，不能保证后续登录页或中转链路完全可用。
+页面不再做入口可用性检测，NAS 入口固定指向公网地址。
 
-如需修改链接，请在 `script.js` 中搜索：
+如需修改链接，请在 `index.html` 中搜索：
 
 ```txt
-https://fnos.net/lazynas
 https://nas.lazynas.com
 ```
 

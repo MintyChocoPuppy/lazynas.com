@@ -3,134 +3,119 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>LazyNAS丨慢慢生活</title>
+    <title>LazyNAS丨小窝有门，日子有光</title>
     <meta
       name="description"
-      content="LazyNAS 是一个家庭 NAS 入口，也是我和柚子老师的生活、旅行与日常档案。"
+      content="LazyNAS 是一个记录刺猬老师和柚子老师生活的小站，也是通往小窝 NAS 的温柔入口。"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#top">LazyNAS</a>
-      <nav class="nav" aria-label="主导航">
-        <a href="#about">关于</a>
-        <a href="#portal">入口</a>
-        <a href="#notes">日志</a>
-        <a href="#history">大事记</a>
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="LazyNAS 首页">LazyNAS</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+        菜单
+      </button>
+      <nav id="site-nav" class="nav" aria-label="主导航" data-nav>
+        <a href="#home">首页</a>
+        <a href="#about">关于我们</a>
+        <a href="#milestones">大事记</a>
+        <a href="#drawer">小窝抽屉</a>
+        <a class="nav-nas" href="https://nas.lazynas.com" target="_blank" rel="noopener noreferrer">进入 NAS</a>
       </nav>
     </header>
 
-    <main id="top" class="page">
-      <section class="hero">
-        <p class="domain">www.lazynas.com</p>
-        <h1>慢慢生活.</h1>
-        <p class="comment">/* 这里是我们的 NAS 入口，也是我和柚子老师的生活主页 */</p>
-      </section>
-
-      <section id="about" class="section about">
-        <h2>关于这里</h2>
-        <div class="prose">
-          <p>这是一个很小的个人网站，属于我和杨喆，昵称柚子老师。</p>
-          <p>它首先是通往家里 NAS 的入口。需要找文件、看照片、整理服务的时候，从这里进去。</p>
-          <p>它也会慢慢变成生活档案：旅行日志、照片索引、一些普通但值得记下来的日子，还有我们一起想去的地方。</p>
-          <p>不追求每天更新，只希望时间久了，打开它时能看到一点真实生活。</p>
+    <main>
+      <section id="home" class="hero" aria-label="小窝封面">
+        <img class="hero-photo" src="./assets/hero/cover.svg" alt="小窝封面占位图" />
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="hero-kicker">LazyNAS</p>
+          <h1>小窝有门，日子有光</h1>
+          <div class="hero-actions">
+            <a class="button button-light" href="#about">进入小窝</a>
+            <a class="button button-ghost" href="https://nas.lazynas.com" target="_blank" rel="noopener noreferrer">进入 NAS</a>
+          </div>
         </div>
+        <a class="scroll-cue" href="#about" aria-label="慢慢往下看">慢慢往下看</a>
       </section>
 
-      <section id="portal" class="section portal">
-        <h2>我的入口</h2>
-        <div class="link-list">
-          <a class="link-item primary" href="http://nas.lazynas.com:5666/" target="_blank" rel="noopener noreferrer">
-            <span>飞牛 NAS</span>
-            <strong>进入家庭服务器</strong>
-            <em>nas.lazynas.com:5666</em>
-          </a>
-          <a class="link-item" href="#notes">
-            <span>生活日志</span>
-            <strong>记录旅行、日常和照片</strong>
-            <em>先从几个小栏目开始</em>
-          </a>
-          <a class="link-item" href="#history">
-            <span>小站大事记</span>
-            <strong>记录这个网站的变化</strong>
-            <em>域名、部署、DDNS、未来的改版</em>
-          </a>
+      <section id="about" class="section about-section">
+        <div class="section-heading">
+          <p class="section-kicker">About us</p>
+          <h2>关于我们</h2>
+          <p>一只小刺猬，一颗小柚子，认真保存普通但发光的日子。</p>
         </div>
-      </section>
-
-      <section id="notes" class="section notes">
-        <h2>生活日志</h2>
-        <div class="note-grid">
-          <article>
-            <span>01</span>
-            <h3>旅行日志</h3>
-            <p>目的地、路线、花费、照片文件夹和回来以后还会想起的瞬间。</p>
+        <div class="person-grid">
+          <article class="person-card">
+            <img src="./assets/ip/ciwei.svg" alt="刺猬老师占位图" />
+            <div>
+              <h3>刺猬老师</h3>
+              <p>喜欢记录、整理、搭小窝。把日常慢慢收进 LazyNAS。</p>
+              <span>记录 / 整理 / 慢慢生活</span>
+            </div>
           </article>
-          <article>
-            <span>02</span>
-            <h3>柚子老师与我</h3>
-            <p>一些两个人的小事：吃饭、散步、电影、周末计划和普通日常。</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>照片索引</h3>
-            <p>未来可以从这里跳到 NAS 相册，按年份、地点和主题整理照片。</p>
-          </article>
-          <article>
-            <span>04</span>
-            <h3>共同清单</h3>
-            <p>想去的城市、想看的展、想做的饭和想一起完成的小目标。</p>
+          <article class="person-card">
+            <img src="./assets/ip/yuzi.svg" alt="柚子老师占位图" />
+            <div>
+              <h3>柚子老师</h3>
+              <p>负责治愈、发光和提供小灵感。和小刺猬一起把日子过成相册。</p>
+              <span>治愈 / 灵感 / 一起发光</span>
+            </div>
           </article>
         </div>
       </section>
 
-      <section class="section gallery" aria-label="生活照片占位">
-        <figure>
-          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="旅行路上的风景" />
-          <figcaption>Travel</figcaption>
-        </figure>
-        <figure>
-          <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=80" alt="温暖的居家空间" />
-          <figcaption>Home</figcaption>
-        </figure>
-        <figure>
-          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80" alt="路途与远方" />
-          <figcaption>Memory</figcaption>
-        </figure>
+      <section id="milestones" class="section milestones-section">
+        <div class="section-heading row-heading">
+          <div>
+            <p class="section-kicker">Travel log</p>
+            <h2>大事记</h2>
+            <p>我们一次次出发，也一次次把日子带回来。</p>
+          </div>
+          <div class="slider-controls" aria-label="大事记切换">
+            <button type="button" data-slide-prev aria-label="向左查看">←</button>
+            <button type="button" data-slide-next aria-label="向右查看">→</button>
+          </div>
+        </div>
+        <div class="milestone-track" data-milestone-track tabindex="0" aria-label="大事记横向列表"></div>
       </section>
 
-      <section id="history" class="section history">
-        <h2>小站大事记</h2>
-        <p class="hint">左右滑动来查看</p>
-        <ol class="history-strip">
-          <li>
-            <time>2026-06-12</time>
-            <strong>注册和部署</strong>
-            <span>LazyNAS 首页通过 GitHub 与 Cloudflare Pages 上线。</span>
-          </li>
-          <li>
-            <time>2026-06-13</time>
-            <strong>NAS 子域名</strong>
-            <span>使用 nas.lazynas.com 作为飞牛 NAS 的专用入口。</span>
-          </li>
-          <li>
-            <time>下一步</time>
-            <strong>第一篇旅行日志</strong>
-            <span>选一次真正的出行，把照片、路线和小结整理进来。</span>
-          </li>
-          <li>
-            <time>未完待续</time>
-            <strong>长期生活档案</strong>
-            <span>慢慢填，不着急，让它自己长出来。</span>
-          </li>
-        </ol>
+      <section id="drawer" class="section drawer-section">
+        <div class="section-heading">
+          <p class="section-kicker">Little drawer</p>
+          <h2>小窝抽屉</h2>
+          <p>一些入口、链接和暂时藏起来的联系方式。</p>
+        </div>
+        <div class="drawer-grid">
+          <section class="drawer-card">
+            <h3>入口</h3>
+            <a href="https://nas.lazynas.com" target="_blank" rel="noopener noreferrer">进入 NAS</a>
+            <a href="#milestones">照片索引，预留</a>
+            <a href="#milestones">日志归档，预留</a>
+          </section>
+          <section class="drawer-card">
+            <h3>友链</h3>
+            <a href="https://maorx.cn" target="_blank" rel="noopener noreferrer">
+              <strong>maorx.cn</strong>
+              <span>清爽、有秩序感的个人小站。</span>
+            </a>
+            <a href="#">
+              <strong>其他后续添加</strong>
+              <span>等新的朋友住进抽屉。</span>
+            </a>
+          </section>
+          <section class="drawer-card">
+            <h3>与我联系</h3>
+            <p>暂时把联系方式藏进抽屉里。</p>
+          </section>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>© <span id="year"></span> LazyNAS</span>
-      <span>For Zcw & 柚子老师</span>
+      <span>© lazynas.com</span>
+      <span>Made with light, photos and a little yuzu.</span>
     </footer>
 
     <script src="./script.js"></script>

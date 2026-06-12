@@ -1,6 +1,6 @@
-.brand {
-  display: inline-grid;
-  gap: 2px;
+:root {
+  --hero-progress: 0;
+  --hero-scroll: 0px;
 }
 
 .hero::after {
@@ -16,53 +16,12 @@
       rgba(255, 248, 236, 0.46) 52%,
       rgba(255, 248, 236, 0.18) 100%
     );
-  opacity: 0;
-  backdrop-filter: blur(8px);
-  transition: opacity 520ms ease;
+  opacity: calc(var(--hero-progress) * 0.95);
+  backdrop-filter: blur(calc(var(--hero-progress) * 14px));
 }
 
-.header-slogan {
-  max-width: min(46vw, 240px);
-  color: currentColor;
-  font-size: 12px;
-  font-weight: 750;
-  line-height: 1.2;
-  opacity: 0;
-  transform: translateY(8px);
-  transition:
-    opacity 420ms ease,
-    transform 420ms ease;
-}
-
-.hero-title {
-  transform: translate3d(0, 0, 0) scale(1);
-  opacity: 1;
-  transform-origin: left center;
-  transition:
-    transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1),
-    opacity 360ms ease;
-}
-
-body.is-hero-collapsed .hero::after {
-  opacity: 1;
-}
-
-body.is-hero-collapsed .header-slogan {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-body.is-hero-collapsed .hero-title {
-  transform: translate3d(-28vw, -38vh, 0) scale(0.44);
-  opacity: 0;
-}
-
-@media (max-width: 820px) {
-  .header-slogan {
-    max-width: 42vw;
-  }
-
-  body.is-hero-collapsed .hero-title {
-    transform: translate3d(-20vw, -36vh, 0) scale(0.58);
-  }
+.hero-photo,
+.hero-overlay {
+  transform: translate3d(0, var(--hero-scroll), 0);
+  will-change: transform;
 }

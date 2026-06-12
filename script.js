@@ -6,18 +6,15 @@ const track = document.querySelector("[data-milestone-track]");
 const prevButton = document.querySelector("[data-slide-prev]");
 const nextButton = document.querySelector("[data-slide-next]");
 const nasEntries = document.querySelectorAll("[data-nas-entry]");
-const nasStatuses = document.querySelectorAll("[data-nas-status]");
 
 const nasTargets = [
   {
     label: "官方入口",
-    url: "https://fnos.net/lazynas",
-    readyText: "已选择官方入口。"
+    url: "https://fnos.net/lazynas"
   },
   {
     label: "公网备选",
-    url: "https://nas.lazynas.com",
-    readyText: "官方入口暂不可达，已切换到公网备选。"
+    url: "https://nas.lazynas.com"
   }
 ];
 
@@ -61,13 +58,10 @@ function updateHeader() {
   header.classList.toggle("is-scrolled", window.scrollY > 12);
 }
 
-function updateNasEntry(target, statusText) {
+function updateNasEntry(target) {
   nasEntries.forEach((entry) => {
     entry.href = target.url;
     entry.setAttribute("aria-label", `进入 NAS，当前使用${target.label}`);
-  });
-  nasStatuses.forEach((status) => {
-    status.textContent = statusText;
   });
 }
 
@@ -92,16 +86,16 @@ async function canReach(url, timeout = 4500) {
 
 async function chooseNasEntry() {
   if (!nasEntries.length) return;
-  updateNasEntry(nasTargets[0], "正在检查官方入口是否可用。");
+  updateNasEntry(nasTargets[0]);
 
   for (const target of nasTargets) {
     if (await canReach(target.url)) {
-      updateNasEntry(target, target.readyText);
+      updateNasEntry(target);
       return;
     }
   }
 
-  updateNasEntry(nasTargets[0], "暂时无法确认入口状态，保留官方入口。");
+  updateNasEntry(nasTargets[0]);
 }
 
 function renderMilestones(items) {

@@ -50,7 +50,6 @@ function updateHeader() {
 
   header.classList.toggle("is-scrolled", window.scrollY > 12);
   root.style.setProperty("--hero-progress", progress.toFixed(3));
-  root.style.setProperty("--hero-scroll", `${clampedScroll.toFixed(1)}px`);
 }
 
 function renderMilestones(items) {

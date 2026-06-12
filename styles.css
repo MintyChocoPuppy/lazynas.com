@@ -31,6 +31,12 @@ body {
     sans-serif;
 }
 
+main,
+.site-footer {
+  position: relative;
+  z-index: 1;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -113,24 +119,6 @@ img {
   padding: 96px 20px 70px;
   text-align: center;
   color: #fff8ec;
-}
-
-.hero-photo,
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.hero-photo {
-  object-fit: cover;
-}
-
-.hero-overlay {
-  background:
-    linear-gradient(rgba(30, 20, 12, 0.34), rgba(30, 20, 12, 0.5)),
-    radial-gradient(circle at 50% 35%, rgba(255, 240, 194, 0.23), transparent 42%);
 }
 
 .hero-content {

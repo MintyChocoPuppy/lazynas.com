@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="./scroll-effects.css" />
   </head>
   <body>
+    <div class="hero-bg-layer" aria-hidden="true">
+      <img src="./assets/hero/cover.svg" alt="" />
+      <div class="hero-bg-shade"></div>
+      <div class="hero-bg-mask"></div>
+    </div>
     <header class="site-header" data-header>
       <a class="brand" href="#home" aria-label="LazyNAS 首页">LazyNAS</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
@@ -28,8 +33,6 @@
 
     <main>
       <section id="home" class="hero" aria-label="小窝封面">
-        <img class="hero-photo" src="./assets/hero/cover.svg" alt="小窝封面占位图" />
-        <div class="hero-overlay"></div>
         <div class="hero-content">
           <p class="hero-kicker">LazyNAS</p>
           <h1 class="hero-title" data-hero-title>小窝有门，日子有光</h1>

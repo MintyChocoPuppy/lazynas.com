@@ -1,14 +1,35 @@
 :root {
   --hero-progress: 0;
-  --hero-scroll: 0px;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
+.hero-bg-layer {
+  position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  overflow: hidden;
+}
+
+.hero-bg-layer img,
+.hero-bg-shade,
+.hero-bg-mask {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-bg-layer img {
+  object-fit: cover;
+}
+
+.hero-bg-shade {
+  background:
+    linear-gradient(rgba(30, 20, 12, 0.34), rgba(30, 20, 12, 0.5)),
+    radial-gradient(circle at 50% 35%, rgba(255, 240, 194, 0.23), transparent 42%);
+}
+
+.hero-bg-mask {
   background:
     linear-gradient(
       180deg,
@@ -20,8 +41,17 @@
   backdrop-filter: blur(calc(var(--hero-progress) * 14px));
 }
 
-.hero-photo,
-.hero-overlay {
-  transform: translate3d(0, var(--hero-scroll), 0);
-  will-change: transform;
+.hero {
+  background: transparent;
+}
+
+main {
+  background: linear-gradient(to bottom, transparent 0 100vh, var(--bg) 100vh);
+}
+
+.about-section,
+.milestones-section,
+.drawer-section,
+.site-footer {
+  background: var(--bg);
 }

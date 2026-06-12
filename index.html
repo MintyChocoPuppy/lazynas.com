@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LazyNAS - 个人数字生活与家庭实验室</title>
+    <meta
+      name="description"
+      content="LazyNAS 是一个关于个人数字生活、家庭 NAS、数据整理和自托管实践的网站。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="LazyNAS 首页">
+        <span class="brand-mark">L</span>
+        <span>LazyNAS</span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="#about">关于</a>
+        <a href="#topics">内容</a>
+        <a href="#publish">上线</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">lazynas.com</p>
+          <h1>把自己的数字生活，慢慢整理成一个长期可用的网站。</h1>
+          <p class="lede">
+            这里可以放你的 NAS 折腾记录、个人工具、家庭数据管理经验，以及你想公开沉淀的技术笔记。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#publish">查看上线清单</a>
+            <a class="button secondary" href="#topics">规划网站内容</a>
+          </div>
+        </div>
+        <picture class="hero-media">
+          <img src="./assets/hero-nas.png" alt="桌面上的 NAS 设备和笔记本电脑" />
+        </picture>
+      </section>
+
+      <section id="about" class="section intro">
+        <div>
+          <p class="section-kicker">定位</p>
+          <h2>先做一个轻量官网，再按需要扩展。</h2>
+        </div>
+        <p>
+          当前版本是静态网站，适合部署到 Cloudflare Pages、GitHub Pages、Vercel
+          等平台。它不需要云服务器，也不需要你把家里电脑暴露到公网。
+        </p>
+      </section>
+
+      <section id="topics" class="section">
+        <div class="section-heading">
+          <p class="section-kicker">内容方向</p>
+          <h2>你可以从这些栏目开始。</h2>
+        </div>
+        <div class="topic-grid">
+          <article class="topic-card">
+            <span class="topic-icon">01</span>
+            <h3>NAS 笔记</h3>
+            <p>记录存储规划、备份策略、相册整理、影音库和家庭网络经验。</p>
+          </article>
+          <article class="topic-card">
+            <span class="topic-icon">02</span>
+            <h3>自托管服务</h3>
+            <p>整理你常用的 Docker 服务、远程访问方式和日常维护方法。</p>
+          </article>
+          <article class="topic-card">
+            <span class="topic-icon">03</span>
+            <h3>个人工具箱</h3>
+            <p>放脚本、清单、教程、链接和你希望长期保留的数字资产。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="publish" class="section publish">
+        <div class="section-heading">
+          <p class="section-kicker">发布路径</p>
+          <h2>推荐先这样上线。</h2>
+        </div>
+        <ol class="steps">
+          <li>
+            <strong>确认首页内容</strong>
+            <span>把这里的占位文字替换成你的个人介绍、项目说明、联系方式。</span>
+          </li>
+          <li>
+            <strong>上传到静态托管平台</strong>
+            <span>推荐 Cloudflare Pages；也可以用 GitHub Pages。</span>
+          </li>
+          <li>
+            <strong>绑定 lazynas.com</strong>
+            <span>在托管平台添加自定义域名，再到阿里云 DNS 添加对应解析记录。</span>
+          </li>
+          <li>
+            <strong>开启 HTTPS 并测试</strong>
+            <span>等待证书生效后，检查电脑和手机都能正常访问。</span>
+          </li>
+        </ol>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div>
+          <p class="section-kicker">下一步</p>
+          <h2>把它变成真正属于你的首页。</h2>
+        </div>
+        <p>
+          你可以把真实昵称、头像、邮箱、社交链接、NAS 型号、网站栏目发给我，我会继续替换并优化成正式版。
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> LazyNAS</span>
+      <a href="#top">返回顶部</a>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

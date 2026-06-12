@@ -3,154 +3,126 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>LazyNAS - NAS 入口与两个人的生活档案</title>
+    <title>LazyNAS丨慢慢生活</title>
     <meta
       name="description"
-      content="LazyNAS 是一个用于进入家庭 NAS、记录我和柚子老师生活、旅行日志与日常片段的私人首页。"
+      content="LazyNAS 是一个家庭 NAS 入口，也是我和柚子老师的生活、旅行与日常档案。"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="LazyNAS 首页">
-        <span class="brand-mark">L</span>
-        <span>LazyNAS</span>
-      </a>
+      <a class="brand" href="#top">LazyNAS</a>
       <nav class="nav" aria-label="主导航">
-        <a href="#nas">NAS</a>
-        <a href="#life">生活</a>
-        <a href="#travel">旅行</a>
-        <a href="#timeline">时间线</a>
+        <a href="#about">关于</a>
+        <a href="#portal">入口</a>
+        <a href="#notes">日志</a>
+        <a href="#history">大事记</a>
       </nav>
     </header>
 
-    <main id="top">
+    <main id="top" class="page">
       <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">LazyNAS · Home Archive</p>
-          <h1>一个通往 NAS，也通往我们生活记录的入口。</h1>
-          <p class="lede">
-            这里给家庭 NAS 留一个稳定入口，也给我和杨喆，柚子老师，留一处慢慢更新的生活档案：旅行、照片、日常、清单和那些不想丢掉的小片段。
-          </p>
-          <div class="hero-actions" aria-label="主要操作">
-            <a class="button primary" href="http://nas.lazynas.com:5666/" target="_blank" rel="noopener noreferrer">进入飞牛 NAS</a>
-            <a class="button secondary" href="#life">看生活记录</a>
-          </div>
+        <p class="domain">www.lazynas.com</p>
+        <h1>慢慢生活.</h1>
+        <p class="comment">/* 这里是我们的 NAS 入口，也是我和柚子老师的生活主页 */</p>
+      </section>
+
+      <section id="about" class="section about">
+        <h2>关于这里</h2>
+        <div class="prose">
+          <p>这是一个很小的个人网站，属于我和杨喆，昵称柚子老师。</p>
+          <p>它首先是通往家里 NAS 的入口。需要找文件、看照片、整理服务的时候，从这里进去。</p>
+          <p>它也会慢慢变成生活档案：旅行日志、照片索引、一些普通但值得记下来的日子，还有我们一起想去的地方。</p>
+          <p>不追求每天更新，只希望时间久了，打开它时能看到一点真实生活。</p>
         </div>
-        <figure class="hero-media" aria-label="生活与 NAS 的首页视觉">
-          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1500&q=82" alt="阳光下的旅行路途和生活瞬间" />
-          <figcaption>
-            <span>NAS online</span>
-            <strong>nas.lazynas.com</strong>
-          </figcaption>
+      </section>
+
+      <section id="portal" class="section portal">
+        <h2>我的入口</h2>
+        <div class="link-list">
+          <a class="link-item primary" href="http://nas.lazynas.com:5666/" target="_blank" rel="noopener noreferrer">
+            <span>飞牛 NAS</span>
+            <strong>进入家庭服务器</strong>
+            <em>nas.lazynas.com:5666</em>
+          </a>
+          <a class="link-item" href="#notes">
+            <span>生活日志</span>
+            <strong>记录旅行、日常和照片</strong>
+            <em>先从几个小栏目开始</em>
+          </a>
+          <a class="link-item" href="#history">
+            <span>小站大事记</span>
+            <strong>记录这个网站的变化</strong>
+            <em>域名、部署、DDNS、未来的改版</em>
+          </a>
+        </div>
+      </section>
+
+      <section id="notes" class="section notes">
+        <h2>生活日志</h2>
+        <div class="note-grid">
+          <article>
+            <span>01</span>
+            <h3>旅行日志</h3>
+            <p>目的地、路线、花费、照片文件夹和回来以后还会想起的瞬间。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>柚子老师与我</h3>
+            <p>一些两个人的小事：吃饭、散步、电影、周末计划和普通日常。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>照片索引</h3>
+            <p>未来可以从这里跳到 NAS 相册，按年份、地点和主题整理照片。</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>共同清单</h3>
+            <p>想去的城市、想看的展、想做的饭和想一起完成的小目标。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section gallery" aria-label="生活照片占位">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="旅行路上的风景" />
+          <figcaption>Travel</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=80" alt="温暖的居家空间" />
+          <figcaption>Home</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80" alt="路途与远方" />
+          <figcaption>Memory</figcaption>
         </figure>
       </section>
 
-      <section id="nas" class="section nas-panel">
-        <div class="section-heading">
-          <p class="section-kicker">NAS 入口</p>
-          <h2>需要回家拿资料时，从这里进去。</h2>
-        </div>
-        <div class="nas-grid">
-          <a class="nas-access" href="http://nas.lazynas.com:5666/" target="_blank" rel="noopener noreferrer">
-            <span class="access-label">主要入口</span>
-            <strong>飞牛 NAS 控制台</strong>
-            <span>http://nas.lazynas.com:5666/</span>
-          </a>
-          <div class="status-list" aria-label="NAS 使用说明">
-            <div>
-              <span>用途</span>
-              <strong>文件、相册、Docker 服务</strong>
-            </div>
-            <div>
-              <span>域名</span>
-              <strong>nas.lazynas.com</strong>
-            </div>
-            <div>
-              <span>提醒</span>
-              <strong>公网访问取决于家中网络与端口状态</strong>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="life" class="section life-section">
-        <div class="section-heading">
-          <p class="section-kicker">生活记录</p>
-          <h2>我和柚子老师的小型生活档案。</h2>
-        </div>
-        <div class="story-grid">
-          <article class="story-card featured">
-            <span class="story-tag">置顶</span>
-            <h3>旅行日志</h3>
-            <p>按城市、日期和路线整理出发前计划、路上的照片、花费、吃到的东西，以及回来后还会想起的瞬间。</p>
-          </article>
-          <article class="story-card">
-            <span class="story-tag">日常</span>
-            <h3>今天也算认真生活</h3>
-            <p>普通日子的饭、散步、电影、家务、计划和小胜利，都会慢慢在这里有位置。</p>
-          </article>
-          <article class="story-card">
-            <span class="story-tag">相册</span>
-            <h3>照片索引</h3>
-            <p>给 NAS 里的照片做一个轻入口：以后可以按年份、地点、人物和主题跳转。</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="travel" class="section travel-section">
-        <div class="travel-copy">
-          <p class="section-kicker">Travel Notes</p>
-          <h2>每一次出门，都值得被好好存档。</h2>
-          <p>
-            这里可以先放旅行计划和归档模板：目的地、日期、同行人、路线、预算、照片文件夹、值得二刷的店。等内容越来越多，它会变成你们自己的旅行地图。
-          </p>
-        </div>
-        <div class="travel-board">
-          <article>
-            <span>下一站</span>
-            <strong>待定</strong>
-            <p>可以放即将出发的城市和攻略链接。</p>
-          </article>
-          <article>
-            <span>照片库</span>
-            <strong>按年份归档</strong>
-            <p>未来从 NAS 相册或公开相册入口跳转。</p>
-          </article>
-          <article>
-            <span>共同清单</span>
-            <strong>想去的地方</strong>
-            <p>把“以后一起去”变成真的待办。</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="timeline" class="section timeline-section">
-        <div class="section-heading">
-          <p class="section-kicker">Timeline</p>
-          <h2>先留好格子，故事慢慢填。</h2>
-        </div>
-        <ol class="timeline">
+      <section id="history" class="section history">
+        <h2>小站大事记</h2>
+        <p class="hint">左右滑动来查看</p>
+        <ol class="history-strip">
           <li>
-            <time>现在</time>
-            <div>
-              <strong>LazyNAS 上线</strong>
-              <span>先把 NAS 入口、生活记录和旅行日志的骨架搭起来。</span>
-            </div>
+            <time>2026-06-12</time>
+            <strong>注册和部署</strong>
+            <span>LazyNAS 首页通过 GitHub 与 Cloudflare Pages 上线。</span>
+          </li>
+          <li>
+            <time>2026-06-13</time>
+            <strong>NAS 子域名</strong>
+            <span>使用 nas.lazynas.com 作为飞牛 NAS 的专用入口。</span>
           </li>
           <li>
             <time>下一步</time>
-            <div>
-              <strong>补第一篇旅行日志</strong>
-              <span>选一次你们都喜欢的出行，把照片、路线和小结放进来。</span>
-            </div>
+            <strong>第一篇旅行日志</strong>
+            <span>选一次真正的出行，把照片、路线和小结整理进来。</span>
           </li>
           <li>
-            <time>以后</time>
-            <div>
-              <strong>做成两个人的长期档案</strong>
-              <span>它不需要每天更新，但每次打开都能找到一点真实生活。</span>
-            </div>
+            <time>未完待续</time>
+            <strong>长期生活档案</strong>
+            <span>慢慢填，不着急，让它自己长出来。</span>
           </li>
         </ol>
       </section>

@@ -5,7 +5,7 @@ const nav = document.querySelector("[data-nav]");
 const track = document.querySelector("[data-milestone-track]");
 const prevButton = document.querySelector("[data-slide-prev]");
 const nextButton = document.querySelector("[data-slide-next]");
-let isHeroCollapsed = false;
+const root = document.documentElement;
 
 const fallbackMilestones = [
   {
@@ -44,15 +44,13 @@ if (year) {
 
 function updateHeader() {
   if (!header) return;
-  if (!isHeroCollapsed && window.scrollY > 36) {
-    isHeroCollapsed = true;
-    document.body.classList.add("is-hero-collapsed");
-  } else if (isHeroCollapsed && window.scrollY < 8) {
-    isHeroCollapsed = false;
-    document.body.classList.remove("is-hero-collapsed");
-  }
+  const heroHeight = Math.max(window.innerHeight, document.querySelector(".hero")?.offsetHeight || 1);
+  const clampedScroll = Math.min(Math.max(window.scrollY, 0), heroHeight);
+  const progress = clampedScroll / heroHeight;
 
   header.classList.toggle("is-scrolled", window.scrollY > 12);
+  root.style.setProperty("--hero-progress", progress.toFixed(3));
+  root.style.setProperty("--hero-scroll", `${clampedScroll.toFixed(1)}px`);
 }
 
 function renderMilestones(items) {

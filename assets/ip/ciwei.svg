@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="刺猬老师占位图">
+  <rect width="400" height="400" rx="48" fill="#fff0c2"/>
+  <circle cx="205" cy="215" r="98" fill="#8a6a50"/>
+  <path d="M95 210 L55 180 L105 175 L70 125 L130 150 L125 82 L175 135 L205 65 L232 136 L286 86 L275 154 L340 132 L302 181 L350 190 L306 218" fill="#5a351f"/>
+  <circle cx="172" cy="205" r="10" fill="#3b2416"/>
+  <circle cx="238" cy="205" r="10" fill="#3b2416"/>
+  <path d="M195 228 Q205 238 216 228" fill="none" stroke="#3b2416" stroke-width="8" stroke-linecap="round"/>
+  <text x="200" y="345" text-anchor="middle" fill="#5a351f" font-family="Arial, sans-serif" font-size="30" font-weight="700">刺猬老师</text>
+</svg>

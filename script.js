@@ -5,18 +5,7 @@ const nav = document.querySelector("[data-nav]");
 const track = document.querySelector("[data-milestone-track]");
 const prevButton = document.querySelector("[data-slide-prev]");
 const nextButton = document.querySelector("[data-slide-next]");
-const nasEntries = document.querySelectorAll("[data-nas-entry]");
-
-const nasTargets = [
-  {
-    label: "官方入口",
-    url: "https://fnos.net/lazynas"
-  },
-  {
-    label: "公网备选",
-    url: "https://nas.lazynas.com"
-  }
-];
+const root = document.documentElement;
 
 const fallbackMilestones = [
   {
@@ -55,47 +44,9 @@ if (year) {
 
 function updateHeader() {
   if (!header) return;
+  const progress = Math.min(window.scrollY / 420, 1);
   header.classList.toggle("is-scrolled", window.scrollY > 12);
-}
-
-function updateNasEntry(target) {
-  nasEntries.forEach((entry) => {
-    entry.href = target.url;
-    entry.setAttribute("aria-label", `进入 NAS，当前使用${target.label}`);
-  });
-}
-
-async function canReach(url, timeout = 4500) {
-  const controller = new AbortController();
-  const timer = window.setTimeout(() => controller.abort(), timeout);
-
-  try {
-    await fetch(url, {
-      method: "GET",
-      mode: "no-cors",
-      cache: "no-store",
-      signal: controller.signal
-    });
-    return true;
-  } catch {
-    return false;
-  } finally {
-    window.clearTimeout(timer);
-  }
-}
-
-async function chooseNasEntry() {
-  if (!nasEntries.length) return;
-  updateNasEntry(nasTargets[0]);
-
-  for (const target of nasTargets) {
-    if (await canReach(target.url)) {
-      updateNasEntry(target);
-      return;
-    }
-  }
-
-  updateNasEntry(nasTargets[0]);
+  root.style.setProperty("--hero-progress", progress.toFixed(3));
 }
 
 function renderMilestones(items) {
@@ -156,4 +107,3 @@ window.addEventListener("scroll", updateHeader, { passive: true });
 
 updateHeader();
 loadMilestones();
-chooseNasEntry();

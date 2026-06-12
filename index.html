@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>LazyNAS - 个人数字生活与家庭实验室</title>
+    <title>LazyNAS - NAS 入口与两个人的生活档案</title>
     <meta
       name="description"
-      content="LazyNAS 是一个关于个人数字生活、家庭 NAS、数据整理和自托管实践的网站。"
+      content="LazyNAS 是一个用于进入家庭 NAS、记录我和柚子老师生活、旅行日志与日常片段的私人首页。"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -17,105 +17,148 @@
         <span>LazyNAS</span>
       </a>
       <nav class="nav" aria-label="主导航">
-        <a href="#about">关于</a>
-        <a href="#topics">内容</a>
-        <a href="#publish">上线</a>
-        <a href="#contact">联系</a>
+        <a href="#nas">NAS</a>
+        <a href="#life">生活</a>
+        <a href="#travel">旅行</a>
+        <a href="#timeline">时间线</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">lazynas.com</p>
-          <h1>把自己的数字生活，慢慢整理成一个长期可用的网站。</h1>
+          <p class="eyebrow">LazyNAS · Home Archive</p>
+          <h1>一个通往 NAS，也通往我们生活记录的入口。</h1>
           <p class="lede">
-            这里可以放你的 NAS 折腾记录、个人工具、家庭数据管理经验，以及你想公开沉淀的技术笔记。
+            这里给家庭 NAS 留一个稳定入口，也给我和杨喆，柚子老师，留一处慢慢更新的生活档案：旅行、照片、日常、清单和那些不想丢掉的小片段。
           </p>
-          <div class="hero-actions">
+          <div class="hero-actions" aria-label="主要操作">
             <a class="button primary" href="http://nas.lazynas.com:5666/" target="_blank" rel="noopener noreferrer">进入飞牛 NAS</a>
-            <a class="button secondary" href="#topics">规划网站内容</a>
+            <a class="button secondary" href="#life">看生活记录</a>
           </div>
         </div>
-        <picture class="hero-media">
-          <img src="https://unsplash.com/photos/gQdPafWDSyk/download?force=true" alt="桌面上的 NAS 设备和笔记本电脑" />
-        </picture>
+        <figure class="hero-media" aria-label="生活与 NAS 的首页视觉">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1500&q=82" alt="阳光下的旅行路途和生活瞬间" />
+          <figcaption>
+            <span>NAS online</span>
+            <strong>nas.lazynas.com</strong>
+          </figcaption>
+        </figure>
       </section>
 
-      <section id="about" class="section intro">
-        <div>
-          <p class="section-kicker">定位</p>
-          <h2>先做一个轻量官网，再按需要扩展。</h2>
-        </div>
-        <p>
-          当前版本是静态网站，适合部署到 Cloudflare Pages、GitHub Pages、Vercel
-          等平台。它不需要云服务器，也不需要你把家里电脑暴露到公网。
-        </p>
-      </section>
-
-      <section id="topics" class="section">
+      <section id="nas" class="section nas-panel">
         <div class="section-heading">
-          <p class="section-kicker">内容方向</p>
-          <h2>你可以从这些栏目开始。</h2>
+          <p class="section-kicker">NAS 入口</p>
+          <h2>需要回家拿资料时，从这里进去。</h2>
         </div>
-        <div class="topic-grid">
-          <article class="topic-card">
-            <span class="topic-icon">01</span>
-            <h3>NAS 笔记</h3>
-            <p>记录存储规划、备份策略、相册整理、影音库和家庭网络经验。</p>
+        <div class="nas-grid">
+          <a class="nas-access" href="http://nas.lazynas.com:5666/" target="_blank" rel="noopener noreferrer">
+            <span class="access-label">主要入口</span>
+            <strong>飞牛 NAS 控制台</strong>
+            <span>http://nas.lazynas.com:5666/</span>
+          </a>
+          <div class="status-list" aria-label="NAS 使用说明">
+            <div>
+              <span>用途</span>
+              <strong>文件、相册、Docker 服务</strong>
+            </div>
+            <div>
+              <span>域名</span>
+              <strong>nas.lazynas.com</strong>
+            </div>
+            <div>
+              <span>提醒</span>
+              <strong>公网访问取决于家中网络与端口状态</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="life" class="section life-section">
+        <div class="section-heading">
+          <p class="section-kicker">生活记录</p>
+          <h2>我和柚子老师的小型生活档案。</h2>
+        </div>
+        <div class="story-grid">
+          <article class="story-card featured">
+            <span class="story-tag">置顶</span>
+            <h3>旅行日志</h3>
+            <p>按城市、日期和路线整理出发前计划、路上的照片、花费、吃到的东西，以及回来后还会想起的瞬间。</p>
           </article>
-          <article class="topic-card">
-            <span class="topic-icon">02</span>
-            <h3>自托管服务</h3>
-            <p>整理你常用的 Docker 服务、远程访问方式和日常维护方法。</p>
+          <article class="story-card">
+            <span class="story-tag">日常</span>
+            <h3>今天也算认真生活</h3>
+            <p>普通日子的饭、散步、电影、家务、计划和小胜利，都会慢慢在这里有位置。</p>
           </article>
-          <article class="topic-card">
-            <span class="topic-icon">03</span>
-            <h3>个人工具箱</h3>
-            <p>放脚本、清单、教程、链接和你希望长期保留的数字资产。</p>
+          <article class="story-card">
+            <span class="story-tag">相册</span>
+            <h3>照片索引</h3>
+            <p>给 NAS 里的照片做一个轻入口：以后可以按年份、地点、人物和主题跳转。</p>
           </article>
         </div>
       </section>
 
-      <section id="publish" class="section publish">
-        <div class="section-heading">
-          <p class="section-kicker">发布路径</p>
-          <h2>推荐先这样上线。</h2>
+      <section id="travel" class="section travel-section">
+        <div class="travel-copy">
+          <p class="section-kicker">Travel Notes</p>
+          <h2>每一次出门，都值得被好好存档。</h2>
+          <p>
+            这里可以先放旅行计划和归档模板：目的地、日期、同行人、路线、预算、照片文件夹、值得二刷的店。等内容越来越多，它会变成你们自己的旅行地图。
+          </p>
         </div>
-        <ol class="steps">
+        <div class="travel-board">
+          <article>
+            <span>下一站</span>
+            <strong>待定</strong>
+            <p>可以放即将出发的城市和攻略链接。</p>
+          </article>
+          <article>
+            <span>照片库</span>
+            <strong>按年份归档</strong>
+            <p>未来从 NAS 相册或公开相册入口跳转。</p>
+          </article>
+          <article>
+            <span>共同清单</span>
+            <strong>想去的地方</strong>
+            <p>把“以后一起去”变成真的待办。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="timeline" class="section timeline-section">
+        <div class="section-heading">
+          <p class="section-kicker">Timeline</p>
+          <h2>先留好格子，故事慢慢填。</h2>
+        </div>
+        <ol class="timeline">
           <li>
-            <strong>确认首页内容</strong>
-            <span>把这里的占位文字替换成你的个人介绍、项目说明、联系方式。</span>
+            <time>现在</time>
+            <div>
+              <strong>LazyNAS 上线</strong>
+              <span>先把 NAS 入口、生活记录和旅行日志的骨架搭起来。</span>
+            </div>
           </li>
           <li>
-            <strong>上传到静态托管平台</strong>
-            <span>推荐 Cloudflare Pages；也可以用 GitHub Pages。</span>
+            <time>下一步</time>
+            <div>
+              <strong>补第一篇旅行日志</strong>
+              <span>选一次你们都喜欢的出行，把照片、路线和小结放进来。</span>
+            </div>
           </li>
           <li>
-            <strong>绑定 lazynas.com</strong>
-            <span>在托管平台添加自定义域名，再到阿里云 DNS 添加对应解析记录。</span>
-          </li>
-          <li>
-            <strong>开启 HTTPS 并测试</strong>
-            <span>等待证书生效后，检查电脑和手机都能正常访问。</span>
+            <time>以后</time>
+            <div>
+              <strong>做成两个人的长期档案</strong>
+              <span>它不需要每天更新，但每次打开都能找到一点真实生活。</span>
+            </div>
           </li>
         </ol>
-      </section>
-
-      <section id="contact" class="section contact">
-        <div>
-          <p class="section-kicker">下一步</p>
-          <h2>把它变成真正属于你的首页。</h2>
-        </div>
-        <p>
-          你可以把真实昵称、头像、邮箱、社交链接、NAS 型号、网站栏目发给我，我会继续替换并优化成正式版。
-        </p>
       </section>
     </main>
 
     <footer class="site-footer">
       <span>© <span id="year"></span> LazyNAS</span>
-      <a href="#top">返回顶部</a>
+      <span>For Zcw & 柚子老师</span>
     </footer>
 
     <script src="./script.js"></script>

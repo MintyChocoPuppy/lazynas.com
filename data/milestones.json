@@ -1,0 +1,30 @@
+[
+  {
+    "title": "南京 · 夜游秦淮",
+    "date": "2026.06.12",
+    "place": "南京",
+    "summary": "晚风吹过河面，我们把灯影装进了相册。",
+    "cover": "./assets/milestones/demo-cover.svg",
+    "tags": ["旅行", "夜景", "散步"],
+    "url": "#"
+  },
+  {
+    "title": "周末小窝整理",
+    "date": "2026.06.13",
+    "place": "LazyNAS",
+    "summary": "把入口、照片和未来的旅行日志先放进一个温暖的小抽屉。",
+    "cover": "./assets/milestones/demo-cover.svg",
+    "tags": ["小窝", "整理", "日常"],
+    "url": "#"
+  },
+  {
+    "title": "未完待续",
+    "date": "Next",
+    "place": "",
+    "summary": "下一次出发，还会有新的照片和新的光。",
+    "cover": "./assets/milestones/demo-cover.svg",
+    "tags": ["未完待续"],
+    "url": "#",
+    "pending": true
+  }
+]

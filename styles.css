@@ -528,16 +528,18 @@ h1 {
 
   .nav a {
     width: 100%;
-    padding: 12px 0;
+    padding: 13px 0;
     border-bottom: 1px solid rgba(90, 53, 31, 0.09);
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 850;
     line-height: 1.25;
     opacity: 0;
-    transform: translateY(-8px);
+    filter: blur(3px);
+    transform: translateY(-14px);
     transition:
-      opacity 220ms ease,
-      transform 260ms ease;
+      opacity 280ms ease,
+      filter 300ms ease,
+      transform 320ms cubic-bezier(0.22, 0.72, 0.25, 1);
   }
 
   .nav a:first-child {
@@ -546,38 +548,42 @@ h1 {
 
   .nav.is-open a {
     opacity: 1;
+    filter: blur(0);
     transform: translateY(0);
   }
 
   .nav.is-open a:nth-child(1) {
-    transition-delay: 60ms;
+    transition-delay: 100ms;
   }
 
   .nav.is-open a:nth-child(2) {
-    transition-delay: 90ms;
+    transition-delay: 160ms;
   }
 
   .nav.is-open a:nth-child(3) {
-    transition-delay: 120ms;
+    transition-delay: 220ms;
   }
 
   .nav.is-open a:nth-child(4) {
-    transition-delay: 150ms;
+    transition-delay: 280ms;
   }
 
   .nav.is-open a:nth-child(5) {
-    transition-delay: 180ms;
+    transition-delay: 340ms;
   }
 
   .nav-nas {
-    display: inline-flex;
-    width: auto;
-    margin-top: 12px;
-    padding: 10px 16px !important;
-    border: 1px solid var(--text-muted);
-    border-radius: 999px;
-    font-size: 15px !important;
-    line-height: 1;
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    padding: 14px 0 !important;
+    border: 0;
+    border-bottom: 1px solid rgba(90, 53, 31, 0.09);
+    border-radius: 0;
+    color: #2f1c12;
+    font-size: 18px !important;
+    font-weight: 900;
+    line-height: 1.25;
   }
 
   h1 {

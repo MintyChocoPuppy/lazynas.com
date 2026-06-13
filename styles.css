@@ -193,6 +193,19 @@ h1 {
   text-shadow: 0 12px 34px rgba(30, 20, 12, 0.32);
 }
 
+.hero-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 0.28em;
+  row-gap: 0.04em;
+  max-width: min(92vw, 980px);
+}
+
+.title-part {
+  white-space: nowrap;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -492,19 +505,19 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0;
-    min-height: 100vh;
-    padding: 86px max(28px, 8vw) 36px;
-    background: rgba(255, 248, 236, 0.96);
+    gap: 2px;
+    padding: 76px max(26px, 7vw) 24px;
+    border-bottom: 1px solid rgba(90, 53, 31, 0.12);
+    background: rgba(255, 248, 236, 0.9);
     color: var(--text);
-    box-shadow: 0 18px 50px var(--shadow);
-    backdrop-filter: blur(24px);
+    box-shadow: 0 18px 42px rgba(90, 53, 31, 0.12);
+    backdrop-filter: blur(22px);
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-16px);
+    transform: translateY(-100%);
     transition:
-      opacity 240ms ease,
-      transform 240ms ease;
+      opacity 260ms ease,
+      transform 320ms cubic-bezier(0.22, 0.72, 0.25, 1);
   }
 
   .nav.is-open {
@@ -515,32 +528,61 @@ h1 {
 
   .nav a {
     width: 100%;
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(90, 53, 31, 0.1);
-    font-size: clamp(28px, 8vw, 44px);
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(90, 53, 31, 0.09);
+    font-size: 19px;
     font-weight: 850;
-    line-height: 1.08;
-    opacity: 1;
+    line-height: 1.25;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition:
+      opacity 220ms ease,
+      transform 260ms ease;
   }
 
   .nav a:first-child {
     border-top: 1px solid rgba(90, 53, 31, 0.1);
   }
 
+  .nav.is-open a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav.is-open a:nth-child(1) {
+    transition-delay: 60ms;
+  }
+
+  .nav.is-open a:nth-child(2) {
+    transition-delay: 90ms;
+  }
+
+  .nav.is-open a:nth-child(3) {
+    transition-delay: 120ms;
+  }
+
+  .nav.is-open a:nth-child(4) {
+    transition-delay: 150ms;
+  }
+
+  .nav.is-open a:nth-child(5) {
+    transition-delay: 180ms;
+  }
+
   .nav-nas {
     display: inline-flex;
     width: auto;
-    margin-top: 18px;
-    padding: 12px 18px !important;
+    margin-top: 12px;
+    padding: 10px 16px !important;
     border: 1px solid var(--text-muted);
     border-radius: 999px;
-    font-size: 17px !important;
+    font-size: 15px !important;
     line-height: 1;
   }
 
   h1 {
-    max-width: 9em;
-    font-size: 34px;
+    max-width: none;
+    font-size: clamp(30px, 7.2vw, 42px);
   }
 
   .person-grid,

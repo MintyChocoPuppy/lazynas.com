@@ -93,14 +93,18 @@ function slide(direction) {
 menuToggle?.addEventListener("click", () => {
   const isOpen = nav?.classList.toggle("is-open") || false;
   header?.classList.toggle("is-open", isOpen);
+  document.body.classList.toggle("is-menu-open", isOpen);
   menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute("aria-label", isOpen ? "关闭菜单" : "打开菜单");
 });
 
 nav?.addEventListener("click", (event) => {
   if (event.target instanceof HTMLAnchorElement) {
     nav.classList.remove("is-open");
     header?.classList.remove("is-open");
+    document.body.classList.remove("is-menu-open");
     menuToggle?.setAttribute("aria-expanded", "false");
+    menuToggle?.setAttribute("aria-label", "打开菜单");
   }
 });
 

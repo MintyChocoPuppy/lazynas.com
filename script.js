@@ -9,6 +9,15 @@ const root = document.documentElement;
 
 const fallbackMilestones = [
   {
+    title: "从一部电影开始…",
+    date: "2025.11.30",
+    place: "南京｜紫金山、明孝陵、江宁万达",
+    summary: "本来只是想去看《疯狂动物城2》，后来多出来了紫金山、明孝陵、恐怖密室、第一次靠近，还有扶梯上那句很轻的“我喜欢你”。",
+    cover: "./assets/milestones/from-a-movie-cover.jpg",
+    tags: ["生活日志", "第一次见面", "电影"],
+    url: "./logs/from-a-movie.html"
+  },
+  {
     title: "第一次认真整理小窝",
     date: "2026.06",
     place: "示例地点",
@@ -58,7 +67,7 @@ function renderMilestones(items) {
     .map((item) => {
       const tags = (item.tags || []).map((tag) => `<span>${tag}</span>`).join("");
       const cover = item.cover || "./assets/milestones/demo-cover.svg";
-      return `
+      const article = `
         <article class="milestone-card${item.pending ? " is-pending" : ""}">
           <img src="${cover}" alt="${item.title} 封面图" loading="lazy" />
           <div class="milestone-body">
@@ -66,9 +75,13 @@ function renderMilestones(items) {
             <h3>${item.title}</h3>
             <p>${item.summary}</p>
             <div class="tags">${tags}</div>
+            ${item.url && item.url !== "#" ? '<span class="read-more">读完整日志</span>' : ""}
           </div>
         </article>
       `;
+
+      if (!item.url || item.url === "#") return article;
+      return `<a class="milestone-link" href="${item.url}" aria-label="阅读 ${item.title}">${article}</a>`;
     })
     .join("");
 }

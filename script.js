@@ -9,7 +9,7 @@ const root = document.documentElement;
 
 const fallbackMilestones = [
   {
-    title: "从电影开始…",
+    title: "从一部电影开始",
     date: "2025.11.30",
     place: "南京｜紫金山、明孝陵、江宁万达",
     summary: "本来只是想去看《疯狂动物城2》，后来多出来了紫金山、明孝陵、恐怖密室、第一次身体接触，还有扶梯上那句很轻的“我喜欢你”。",

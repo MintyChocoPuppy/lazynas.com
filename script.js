@@ -18,24 +18,6 @@ const fallbackMilestones = [
     url: "./logs/from-a-movie.html"
   },
   {
-    title: "第一次认真整理小窝",
-    date: "2026.06",
-    place: "示例地点",
-    summary: "这里先放一段示例文字，记录一个值得保存的普通晚上。以后可以换成真实旅行、约会、搬家、节日或任何闪闪发光的小事。",
-    cover: "./assets/milestones/demo-cover.svg",
-    tags: ["示例", "生活", "记录"],
-    url: "#"
-  },
-  {
-    title: "一场还没命名的旅行",
-    date: "2026.07",
-    place: "示例城市",
-    summary: "这张卡片用来占位旅行日志。等照片上传后，可以写下路线、天气、吃到的东西，以及柚子老师那天最喜欢的一瞬间。",
-    cover: "./assets/milestones/demo-cover.svg",
-    tags: ["示例", "旅行", "相册"],
-    url: "#"
-  },
-  {
     title: "未完待续",
     date: "Next",
     place: "",

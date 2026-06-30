@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="柚子老师占位图">
-  <rect width="400" height="400" rx="48" fill="#fff8ec"/>
-  <circle cx="200" cy="205" r="108" fill="#f6b93b"/>
-  <path d="M210 93 C235 55 278 58 300 88 C270 102 238 108 210 93Z" fill="#7cb342"/>
-  <path d="M150 210 Q200 255 250 210" fill="none" stroke="#5a351f" stroke-width="10" stroke-linecap="round"/>
-  <circle cx="162" cy="190" r="11" fill="#5a351f"/>
-  <circle cx="238" cy="190" r="11" fill="#5a351f"/>
-  <text x="200" y="345" text-anchor="middle" fill="#5a351f" font-family="Arial, sans-serif" font-size="30" font-weight="700">柚子老师</text>
-</svg>

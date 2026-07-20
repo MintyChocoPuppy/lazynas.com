@@ -1,0 +1,21 @@
+[
+  {
+    "title": "从一部电影开始",
+    "date": "2025.11.30",
+    "place": "南京｜紫金山、明孝陵、江宁万达",
+    "summary": "本来只是想去看《疯狂动物城2》，后来多出来了紫金山、明孝陵、恐怖密室、第一次身体接触，还有扶梯上那句很轻的“我喜欢你”。",
+    "cover": "./assets/milestones/from-a-movie-cover.jpg",
+    "tags": ["生活日志", "第一次见面", "电影"],
+    "url": "./logs/from-a-movie.html"
+  },
+  {
+    "title": "未完待续",
+    "date": "Next",
+    "place": "",
+    "summary": "这里保留给下一段日子。等新的照片和故事准备好，再把它正式写进小窝。",
+    "cover": "./assets/milestones/demo-cover.svg",
+    "tags": ["未完待续"],
+    "url": "#",
+    "pending": true
+  }
+]

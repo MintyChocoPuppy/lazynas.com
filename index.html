@@ -3,24 +3,125 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex, nofollow" />
-    <title>LazyNAS丨小窝整理中</title>
+    <title>LazyNAS丨小窝有门，日子有光</title>
     <meta
       name="description"
-      content="LazyNAS 正在重新整理。小窝暂时只开一盏灯，等内容准备好后再正式回来。"
+      content="LazyNAS 是一个记录刺猬老师和柚子老师生活的小站，也是通往小窝 NAS 的温柔入口。"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./scroll-effects.css" />
   </head>
-  <body class="maintenance-page">
-    <main class="maintenance-main" aria-label="LazyNAS 施工中">
-      <section class="maintenance-card">
-        <p class="maintenance-kicker">LazyNAS</p>
-        <h1>小窝整理中</h1>
-        <p class="maintenance-copy">
-          这里正在重新打扫、整理照片和日志。门还在，灯也还亮着，只是暂时不对外展开。
-        </p>
-        <p class="maintenance-note">小窝有门，日子有光。我们很快回来。</p>
+  <body>
+    <div class="hero-bg-layer" aria-hidden="true">
+      <img src="./assets/hero/cover.svg" alt="" />
+      <div class="hero-bg-shade"></div>
+      <div class="hero-bg-mask"></div>
+    </div>
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="LazyNAS 首页">LazyNAS</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开菜单" data-menu-toggle>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="site-nav" class="nav" aria-label="主导航" data-nav>
+        <a href="#home">首页</a>
+        <a href="#about">关于我们</a>
+        <a href="#milestones">大事记</a>
+        <a href="#drawer">小窝抽屉</a>
+        <a class="nav-nas" href="https://fnos.net/lazynas" target="_blank" rel="noopener noreferrer">进入 NAS</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero" aria-label="小窝封面">
+        <div class="hero-content">
+          <p class="hero-kicker">LazyNAS</p>
+          <h1 class="hero-title" data-hero-title>
+            <span class="title-part">小窝有门，</span>
+            <span class="title-part">日子有光</span>
+          </h1>
+          <div class="hero-actions">
+            <a class="button button-light" href="#about">进入小窝</a>
+            <a class="button button-ghost" href="https://fnos.net/lazynas" target="_blank" rel="noopener noreferrer">进入 NAS</a>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#about" aria-label="慢慢往下看">慢慢往下看</a>
+      </section>
+
+      <section id="about" class="section about-section">
+        <div class="section-heading">
+          <p class="section-kicker">About us</p>
+          <h2>关于我们</h2>
+          <p>一只小刺猬，一颗小柚子，认真保存普通但发光的日子。</p>
+        </div>
+        <div class="person-grid">
+          <article class="person-card">
+            <img src="./assets/ip/ciwei.svg" alt="刺猬老师占位图" />
+            <div>
+              <h3>刺猬老师</h3>
+              <p>喜欢记录、整理、搭小窝。把日常慢慢收进 LazyNAS。</p>
+              <span>记录 / 整理 / 慢慢生活</span>
+            </div>
+          </article>
+          <article class="person-card">
+            <img src="./assets/ip/yuzi.svg" alt="柚子老师占位图" />
+            <div>
+              <h3>柚子老师</h3>
+              <p>负责治愈、发光和提供小灵感。和小刺猬一起把日子过成相册。</p>
+              <span>治愈 / 灵感 / 一起发光</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="milestones" class="section milestones-section">
+        <div class="section-heading row-heading">
+          <div>
+            <p class="section-kicker">Travel log</p>
+            <h2>大事记</h2>
+            <p>我们一次次出发，也一次次把日子带回来。</p>
+          </div>
+          <div class="slider-controls" aria-label="大事记切换">
+            <button type="button" data-slide-prev aria-label="向左查看">←</button>
+            <button type="button" data-slide-next aria-label="向右查看">→</button>
+          </div>
+        </div>
+        <div class="milestone-track" data-milestone-track tabindex="0" aria-label="大事记横向列表"></div>
+      </section>
+
+      <section id="drawer" class="section drawer-section">
+        <div class="section-heading">
+          <p class="section-kicker">Little drawer</p>
+          <h2>小窝抽屉</h2>
+          <p>一些入口、链接和暂时藏起来的联系方式。</p>
+        </div>
+        <div class="drawer-grid">
+          <section class="drawer-card">
+            <h3>入口</h3>
+            <a href="https://fnos.net/lazynas" target="_blank" rel="noopener noreferrer">进入 NAS</a>
+            <a href="#milestones">照片索引，预留</a>
+            <a href="#milestones">日志归档，预留</a>
+          </section>
+          <section class="drawer-card">
+            <h3>友链</h3>
+            <a href="#">
+              <strong>友链预留</strong>
+              <span>等新的朋友住进抽屉。</span>
+            </a>
+          </section>
+          <section class="drawer-card">
+            <h3>与我联系</h3>
+            <p>暂时把联系方式藏进抽屉里。</p>
+          </section>
+        </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <span>© lazynas.com</span>
+      <span>Made with light, photos and a little yuzu.</span>
+    </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>
